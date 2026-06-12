@@ -59,6 +59,49 @@ class Solution:
             else:
                 right-=1;
         return max_area
+        -----------------------------------------------------------------
+        ⚙️ Two-Pointer Approach
+Initialize two pointers:
+
+left = 0 (start of array)
+
+right = height.length - 1 (end of array)
+
+Calculate area:
+
+Compute area using current left and right.
+
+Update area_max if this area is larger.
+
+Move the pointer:
+
+Move the pointer pointing to the shorter line:
+
+If height[left] < height[right], increment left.
+
+Else, decrement right.
+
+Reason: The limiting factor is the shorter line. Moving the taller line inward won’t help, but moving the shorter one might find a taller line and increase area.
+
+Repeat until pointers meet:
+
+Continue until left < right.
+
+⏱️ Complexity
+Time: 
+𝑂
+(
+𝑛
+)
+ — each pointer moves at most once across the array.
+
+Space: 
+𝑂
+(
+1
+)
+ — only a few variables are used.
+        
         
         
         '''
