@@ -1,0 +1,25 @@
+# LeetCode Solutions
+
+This repository contains my LeetCode solutions in:
+
+- SQL
+- Python
+- Java
+- TypeScript
+
+## Solved Problems
+
+| Problem No | Problem Name | Language |
+|------------|-------------|-----------|
+| 175 | Combine Two Tables | SQL |
+
+---------------------------------------------------
+-- LeetCode 175: Combine Two Tables
+
+SELECT p.firstName,
+       p.lastName,
+       a.city,
+       a.state
+FROM Person p
+LEFT JOIN Address a
+ON p.personId = a.personId;
